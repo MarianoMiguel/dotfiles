@@ -1,7 +1,14 @@
----@type LazySpec
 return {
   "Saghen/blink.cmp",
   opts = function(_, opts)
+    opts.sources = vim.tbl_deep_extend("force", opts.sources or {}, {
+      default = {
+        "lsp",
+        "path",
+        "buffer",
+        "codecompanion",
+      },
+    })
     opts.cmdline = vim.tbl_deep_extend("force", opts.cmdline or {}, {
       enabled = true,
       keymap = { preset = "cmdline" },

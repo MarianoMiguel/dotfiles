@@ -16,3 +16,5 @@ vim.keymap.set("x", "mj", ":MoveBlock 1<CR>", opts)
 vim.keymap.set("x", "mk", ":MoveBlock -1<CR>", opts)
 vim.keymap.set("v", "mh", ":MoveHBlock -1<CR>", opts)
 vim.keymap.set("v", "ml", ":MoveHBlock 1<CR>", opts)
+
+vim.keymap.set("n", "<C-c>", ":CodeCompanionChat<CR>")
