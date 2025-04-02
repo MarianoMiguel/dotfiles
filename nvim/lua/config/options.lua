@@ -3,3 +3,5 @@
 -- Add any additional options here
 local opt = vim.opt
 opt.wrap = true
+vim.o.undofile = true
+vim.o.undodir = vim.fn.stdpath("cache") .. "/undo"
