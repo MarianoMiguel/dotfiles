@@ -23,12 +23,12 @@ vim.keymap.set("n", "<C-c>", ":CodeCompanionChat<CR>")
 -- vim.keymap.set("n", "<C-l>", "g_", opts) -- End of line (non-blank)
 --
 -- Insert mode
-vim.keymap.set("i", "<C-h>", "<C-o>^", opts)
-vim.keymap.set("i", "<C-l>", "<C-o>$", opts)
-
--- Visual mode
-vim.keymap.set("v", "<C-h>", "^", opts)
-vim.keymap.set("v", "<C-l>", "$", opts)
+-- vim.keymap.set("i", "<C-h>", "<C-o>^", opts)
+-- vim.keymap.set("i", "<C-l>", "<C-o>$", opts)
+--
+-- -- Visual mode
+-- vim.keymap.set("v", "<C-h>", "^", opts)
+-- vim.keymap.set("v", "<C-l>", "$", opts)
 --
 -- local noop = "<nop>"
 --
@@ -38,3 +38,12 @@ vim.keymap.set("v", "<C-l>", "$", opts)
 --   vim.keymap.set(mode, "<Up>", noop, opts)
 --   vim.keymap.set(mode, "<Down>", noop, opts)
 -- end
+
+vim.keymap.set("n", "<A-Right>", "$")
+vim.keymap.set("n", "<A-Left>", "^")
+vim.keymap.set("i", "<A-Left>", "<C-o>^")
+vim.keymap.set("i", "<A-Right>", "<C-o>g_<Right>")
+vim.keymap.set("n", "<A-S-Right>", "v$", opts)
+vim.keymap.set("n", "<A-S-Left>", "v^", opts)
+vim.keymap.set("v", "<A-S-Right>", "$", opts)
+vim.keymap.set("v", "<A-S-Left>", "^", opts)
