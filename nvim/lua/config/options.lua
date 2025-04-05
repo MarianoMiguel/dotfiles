@@ -5,3 +5,5 @@ local opt = vim.opt
 opt.wrap = true
 vim.o.undofile = true
 vim.o.undodir = vim.fn.stdpath("cache") .. "/undo"
+vim.opt.number = true
+vim.opt.relativenumber = false
