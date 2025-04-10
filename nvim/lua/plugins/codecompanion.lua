@@ -1,21 +1,22 @@
-return {
-  {
-    "olimorris/codecompanion.nvim",
-    config = true,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    opts = {
-      strategies = {
-        -- Change the default chat adapter
-        chat = {
-          adapter = "anthropic",
-        },
-        inline = {
-          adapter = "anthropic",
-        },
-      },
-    },
-  },
-}
+return {}
+-- return {
+--   {
+--     "olimorris/codecompanion.nvim",
+--     config = true,
+--     dependencies = {
+--       "nvim-lua/plenary.nvim",
+--       "nvim-treesitter/nvim-treesitter",
+--     },
+--     opts = {
+--       strategies = {
+--         -- Change the default chat adapter
+--         chat = {
+--           adapter = "anthropic",
+--         },
+--         inline = {
+--           adapter = "anthropic",
+--         },
+--       },
+--     },
+--   },
+-- }
