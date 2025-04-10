@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Volumes/Dev/monarch"
+		}
+	],
+	"settings": {
+		"terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
+		"notebook.output.fontFamily": "Zed Plex Mono",
+		"debug.console.fontFamily": "Zed Plex Mono",
+		"chat.editor.fontFamily": "Zed Plex Mono"
+	}
+}

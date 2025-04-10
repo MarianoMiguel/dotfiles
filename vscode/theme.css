@@ -1,0 +1,6 @@
+*:not(.codicon, .menubar-menu-button > *, .icon) {
+  font-family: 'GeistMono Nerd Font' !important;
+}
+.monaco-list[aria-label^="Your Cursor installation"] {
+  display: none !important;
+}
