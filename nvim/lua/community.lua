@@ -25,5 +25,6 @@ return {
   { import = "astrocommunity.workflow.hardtime-nvim" },
   { import = "astrocommunity.workflow.precognition-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.colorscheme.rose-pine" },
   -- import/override with your plugins folder
 }
