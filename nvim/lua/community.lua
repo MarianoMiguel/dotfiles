@@ -8,9 +8,10 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.completion.copilot-vim-cmp" },
   { import = "astrocommunity.motion.mini-surround" },
+  -- { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.harpoon" },
-  { import = "astrocommunity.scrolling.mini-animate" },
+  -- { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.indent.mini-indentscope" },
   -- { import = "astrocommunity.indent.indent-blankline-nvim" },
   { import = "astrocommunity.git.blame-nvim" },
@@ -27,4 +28,5 @@ return {
   { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.colorscheme.rose-pine" },
   -- import/override with your plugins folder
+  { import = "astrocommunity.diagnostics.tiny-inline-diagnostic-nvim" },
 }
