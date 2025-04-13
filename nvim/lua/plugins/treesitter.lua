@@ -3,11 +3,12 @@
 ---@type LazySpec
 return {
   "nvim-treesitter/nvim-treesitter",
-  opts = {
-    autotag = {
+  opts = function(_, opts)
+    opts.modules = opts.modules or {}
+    opts.modules.autotag = {
       enable = true,
-    },
-    ensure_installed = {
+    }
+    opts.ensure_installed = {
       "lua",
       "vim",
       "vimdoc",
@@ -36,6 +37,6 @@ return {
       "svelte",
       "dockerfile",
       -- add more arguments for adding more treesitter parsers
-    },
-  },
+    }
+  end,
 }
