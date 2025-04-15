@@ -29,4 +29,6 @@ return {
   { import = "astrocommunity.colorscheme.rose-pine" },
   -- import/override with your plugins folder
   { import = "astrocommunity.diagnostics.tiny-inline-diagnostic-nvim" },
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.search.grug-far-nvim" },
 }
