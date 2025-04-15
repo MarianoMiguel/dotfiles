@@ -121,3 +121,7 @@ shift + cmd - a : yabai -m window --resize left:-20:0
 
 alt-tab : yabai -m space --focus recent
 cmd-tab : yabai -m space --focus recent
+
+alt - o : ~/.config/yabai/adjust-opacity.sh up
+alt - p: ~/.config/yabai/adjust-opacity.sh down
+
