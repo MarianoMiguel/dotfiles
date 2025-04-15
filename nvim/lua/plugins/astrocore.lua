@@ -72,12 +72,24 @@ return {
           desc = "Close buffer from tabline",
         },
 
+        ["<C-c>"] = { "<Esc>", desc = "Map Ctrl+c to Escape" },
+        ["<Leader>D"] = { '"_d', desc = "Delete without yanking (nnoremap & vnoremap)" },
+        ["<Leader>Y"] = { '"+Y', desc = "Yank to system clipboard (nmap)" },
+        ["<Leader>y"] = { '"+y', desc = "Yank to system clipboard (nnoremap & vnoremap)" },
+        ["<C-d>"] = { "<C-d>zz", desc = "Scroll down and center (nnoremap)" },
+        ["<C-u>"] = { "<C-u>zz", desc = "Scroll up and center (nnoremap)" },
+        ["<Leader>p"] = { '"_dP', desc = "Paste without overwriting register (nnoremap)" },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+      },
+      v = {
+        ["<Leader>D"] = { '"_d', desc = "Delete without yanking (vnoremap)" },
+        ["<Leader>y"] = { '"+y', desc = "Yank to system clipboard (vnoremap)" },
+        ["<Leader>p"] = { '"_dP', desc = "Paste without overwriting register (xnoremap)" },
       },
     },
   },
