@@ -11,7 +11,7 @@ return {
   -- { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.motion.flash-nvim" },
   { import = "astrocommunity.motion.harpoon" },
-  -- { import = "astrocommunity.scrolling.mini-animate" },
+  { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.indent.mini-indentscope" },
   -- { import = "astrocommunity.indent.indent-blankline-nvim" },
   { import = "astrocommunity.git.blame-nvim" },

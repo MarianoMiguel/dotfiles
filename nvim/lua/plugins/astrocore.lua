@@ -76,8 +76,12 @@ return {
         ["<Leader>D"] = { '"_d', desc = "Delete without yanking (nnoremap & vnoremap)" },
         ["<Leader>Y"] = { '"+Y', desc = "Yank to system clipboard (nmap)" },
         ["<Leader>y"] = { '"+y', desc = "Yank to system clipboard (nnoremap & vnoremap)" },
-        ["<C-d>"] = { "<C-d>zz", desc = "Scroll down and center (nnoremap)" },
-        ["<C-u>"] = { "<C-u>zz", desc = "Scroll up and center (nnoremap)" },
+        -- ["<C-d>"] = { "<C-d>zz", desc = "Scroll down and center (nnoremap)" },
+        -- ["<C-u>"] = { "<C-u>zz", desc = "Scroll up and center (nnoremap)" },
+        -- ["<C-f>"] = { "<C-f>zz", desc = "Scroll down and center" },
+        -- ["<C-b>"] = { "<C-b>zz", desc = "Scroll up and center" },
+        -- ["<C-K>"] = { "<C-u>", desc = "Scroll up and center" },
+        -- ["<C-J>"] = { "<C-d>", desc = "Scroll down and center" },
         ["<Leader>p"] = { '"_dP', desc = "Paste without overwriting register (nnoremap)" },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
