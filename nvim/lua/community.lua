@@ -23,6 +23,7 @@ return {
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.svelte" },
   { import = "astrocommunity.pack.vue" },
+  { import = "astrocommunity.note-taking.global-note-nvim" },
   -- { import = "astrocommunity.workflow.hardtime-nvim" },
   -- { import = "astrocommunity.workflow.precognition-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
