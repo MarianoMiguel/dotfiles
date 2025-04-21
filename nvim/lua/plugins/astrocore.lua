@@ -82,7 +82,6 @@ return {
         -- ["<C-b>"] = { "<C-b>:sleep 30m<CR>zz", desc = "Scroll up and center", silent = true },
         -- ["<C-K>"] = { "<C-u>", desc = "Scroll up and center" },
         -- ["<C-J>"] = { "<C-d>", desc = "Scroll down and center" },
-        ["<Leader>ux"] = { ":Themery<CR>", desc = "Open theme picker" },
         ["<Leader>p"] = { '"_dP', desc = "Paste without overwriting register (nnoremap)" },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
