@@ -15,7 +15,7 @@ return {
   { import = "astrocommunity.indent.mini-indentscope" },
   -- { import = "astrocommunity.indent.indent-blankline-nvim" },
   { import = "astrocommunity.git.blame-nvim" },
-  -- { import = "astrocommunity.completion.avante-nvim" },
+  { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.astro" },
