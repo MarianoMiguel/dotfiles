@@ -262,3 +262,5 @@ client.background        $base
 bindsym Mod1+shift+3 exec "flameshot gui"
 bindsym Mod1+Tab workspace back_and_forth
 bindsym $mod+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi
+bindsym Ctrl+Mod1+Right workspace next
+bindsym Ctrl+Mod1+Left workspace prev
