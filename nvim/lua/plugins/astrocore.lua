@@ -90,11 +90,19 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+        ["<A-l>"] = { "$", desc = "Go to end of line (normal mode)", silent = true },
+        ["<A-h>"] = { "_", desc = "Go to start of line (normal mode)", silent = true },
       },
       v = {
         ["<Leader>D"] = { '"_d', desc = "Delete without yanking (vnoremap)" },
         ["<Leader>y"] = { '"+y', desc = "Yank to system clipboard (vnoremap)" },
         ["<Leader>p"] = { '"_dP', desc = "Paste without overwriting register (xnoremap)" },
+        ["<A-l>"] = { "$", desc = "Go to end of line (visual mode)", silent = true },
+        ["<A-h>"] = { "_", desc = "Go to start of line (visual mode)", silent = true },
+      },
+      i = {
+        ["<A-l>"] = { "<C-o>$", desc = "Go to end of line (insert mode)", silent = true },
+        ["<A-h>"] = { "<C-o>_", desc = "Go to start of line (insert mode)", silent = true },
       },
     },
   },
