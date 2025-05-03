@@ -5,7 +5,6 @@
                 "rules": [
                     {
                         "description": "Change Alt + Right to Alt + M, Alt + Left to Alt + N",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
