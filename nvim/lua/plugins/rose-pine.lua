@@ -3,7 +3,7 @@ return {
     "rose-pine",
     opts = {
       styles = {
-        transparency = true,
+        -- transparency = true,
         bold = true,
         italic = true,
       },

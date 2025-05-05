@@ -40,7 +40,7 @@ return {
     options = {
       opt = { -- vim.opt.<key>
         cursorline = true,
-        relativenumber = false, -- sets vim.opt.relativenumber
+        -- relativenumber = false, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
@@ -92,6 +92,8 @@ return {
         -- ["<C-S>"] = false,
         ["<A-l>"] = { "$", desc = "Go to end of line (normal mode)", silent = true },
         ["<A-h>"] = { "_", desc = "Go to start of line (normal mode)", silent = true },
+        ["<A-k>"] = { "gg_", desc = "Go to start of file and first non-blank character (normal mode)", silent = true },
+        ["<A-j>"] = { "G$", desc = "Go to end of file and end of line (normal mode)", silent = true },
       },
       v = {
         ["<Leader>D"] = { '"_d', desc = "Delete without yanking (vnoremap)" },
@@ -99,10 +101,18 @@ return {
         ["<Leader>p"] = { '"_dP', desc = "Paste without overwriting register (xnoremap)" },
         ["<A-l>"] = { "$", desc = "Go to end of line (visual mode)", silent = true },
         ["<A-h>"] = { "_", desc = "Go to start of line (visual mode)", silent = true },
+        ["<A-k>"] = { "gg_", desc = "Go to start of file and first non-blank character (visual mode)", silent = true },
+        ["<A-j>"] = { "G$", desc = "Go to end of file and end of line (visual mode)", silent = true },
       },
       i = {
         ["<A-l>"] = { "<C-o>$", desc = "Go to end of line (insert mode)", silent = true },
         ["<A-h>"] = { "<C-o>_", desc = "Go to start of line (insert mode)", silent = true },
+        ["<A-k>"] = {
+          "<C-o>gg<C-o>_",
+          desc = "Go to start of file and first non-blank character (insert mode)",
+          silent = true,
+        },
+        ["<A-j>"] = { "<C-o>G<C-o>$", desc = "Go to end of file and end of line (insert mode)", silent = true },
       },
     },
   },

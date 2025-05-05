@@ -33,20 +33,20 @@ return {
     name = "ayu",
     -- priority = 1000,
     opts = {
-      overrides = {
-        RenderMarkdownCode = { link = "Visual" },
-        RenderMarkdownCodeInline = { link = "Visual" },
-        Normal = { bg = "None" },
-        NormalFloat = { bg = "none" },
-        ColorColumn = { bg = "None" },
-        SignColumn = { bg = "None" },
-        Folded = { bg = "None" },
-        FoldColumn = { bg = "None" },
-        CursorLine = { bg = "None" },
-        CursorColumn = { bg = "None" },
-        VertSplit = { bg = "None" },
-        -- TermCursor = { link = "Substitute" },
-      },
+      -- overrides = {
+      --   RenderMarkdownCode = { link = "Visual" },
+      --   RenderMarkdownCodeInline = { link = "Visual" },
+      --   Normal = { bg = "None" },
+      --   NormalFloat = { bg = "none" },
+      --   ColorColumn = { bg = "None" },
+      --   SignColumn = { bg = "None" },
+      --   Folded = { bg = "None" },
+      --   FoldColumn = { bg = "None" },
+      --   CursorLine = { bg = "None" },
+      --   CursorColumn = { bg = "None" },
+      --   VertSplit = { bg = "None" },
+      --   -- TermCursor = { link = "Substitute" },
+      -- },
     },
   },
   -- Rose Pine
@@ -56,8 +56,8 @@ return {
     config = function()
       require("rose-pine").setup {
         variant = "moon",
-        disable_background = true,
-        disable_float_background = true,
+        -- disable_background = true,
+        -- disable_float_background = true,
       }
     end,
   },
@@ -69,7 +69,7 @@ return {
     config = function()
       require("catppuccin").setup {
         flavour = "mocha",
-        transparent_background = true,
+        -- transparent_background = true,
       }
     end,
   },
