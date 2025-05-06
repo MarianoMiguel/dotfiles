@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-# Prepare the center-active-win script
+# Location for custom script
 BIN_DIR="$HOME/.local/bin"
 SCRIPT_PATH="$BIN_DIR/center-active-win"
-
 mkdir -p "$BIN_DIR"
 
+# Write the center-active-win script
 cat << 'EOF' > "$SCRIPT_PATH"
 #!/usr/bin/env bash
 read scrW scrH <<<"$(xrandr | awk '/\*/{split($1,a,"x");print a[1],a[2]; exit}')"
@@ -19,20 +19,14 @@ EOF
 
 chmod +x "$SCRIPT_PATH"
 
-# Get current keybinding list
 BASE_KEY="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
-EXISTING=$(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings | sed "s/\]$/,/")
+KEYS=()
 
-# Clean base key format
-function make_entry() {
+make_entry() {
     echo "'${BASE_KEY}/custom$1/'"
 }
 
-# Reset and construct all entries
-KEYS=()
-
-# Helper to write individual custom binding
-function write_binding() {
+write_binding() {
     local index=$1
     local name=$2
     local command=$3
@@ -42,31 +36,32 @@ function write_binding() {
     dconf write "${path}name" "'${name}'"
     dconf write "${path}command" "'${command}'"
     dconf write "${path}binding" "'${binding}'"
-
     KEYS+=("$(make_entry $index)")
 }
 
 i=0
+# Ulauncher toggle
 write_binding $((i++)) "Ulauncher" "ulauncher-toggle" "<Alt>space"
 
-# Super+1 to Super+0
-for ws in {0..9}; do
-    key=$(( (ws + 1) % 10 ))
-    write_binding $((i++)) "Go to workspace ${ws}" "wmctrl -s ${ws}" "<Super>${key}"
+# Alt+1 to Alt+0: Switch to workspace 0–9
+for n in {1..9}; do
+    ws=$((n - 1))
+    write_binding $((i++)) "Go to workspace $ws" "wmctrl -s $ws" "<Alt>${n}"
 done
+write_binding $((i++)) "Go to workspace 9" "wmctrl -s 9" "<Alt>0"
 
-# Super+Shift+1 to Super+Shift+0
-for ws in {0..9}; do
-    key=$(( (ws + 1) % 10 ))
-    write_binding $((i++)) "Move to workspace ${ws}" "wmctrl -r :ACTIVE: -t ${ws}" "<Super><Shift>${key}"
+# Alt+Shift+1 to Alt+Shift+0: Move to workspace 0–9
+for n in {1..9}; do
+    ws=$((n - 1))
+    write_binding $((i++)) "Move to workspace $ws" "wmctrl -r :ACTIVE: -t $ws" "<Alt><Shift>${n}"
 done
+write_binding $((i++)) "Move to workspace 9" "wmctrl -r :ACTIVE: -t 9" "<Alt><Shift>0"
 
-# Super+C (center)
-write_binding $((i++)) "Center Active Window" "$SCRIPT_PATH" "<Super>c"
+# Center active window
+write_binding $((i++)) "Center Active Window" "$SCRIPT_PATH" "<Alt>c"
 
-# Write the final full list to gsettings
-joined=$(IFS=,; echo "[${KEYS[*]}]")
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "$joined"
+# Apply all at once
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[${KEYS[*]}]"
 
-echo "✅ GNOME keyboard shortcuts successfully created."
+echo "✅ All GNOME keyboard shortcuts installed with Alt modifier and correct workspace mapping."
 
