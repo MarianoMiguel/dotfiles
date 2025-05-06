@@ -23,6 +23,7 @@ font pango:GeistMono Nerd Font 14
 #font pango:DejaVu Sans Mono 8
 
 exec_always --no-startup-id ~/.config/i3/monitors.sh
+exec_always --no-startup-id ~/.config/i3/audio.sh
 exec_always --no-startup-id "feh --bg-scale ~/Pictures/wallpaper.jpg"
 exec_always --no-startup-id picom -b
 exec_always killall polybar

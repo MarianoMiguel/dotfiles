@@ -1,0 +1,3 @@
+Run sudo ln -s ~/.config/i3/audio.sh /usr/local/bin/pulseaudio-control
+And chmod +x ~/.config/i3/audio.sh
+ 
