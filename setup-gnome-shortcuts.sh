@@ -61,7 +61,8 @@ write_binding $((i++)) "Move to workspace 9" "wmctrl -r :ACTIVE: -t 9" "<Alt><Sh
 write_binding $((i++)) "Center Active Window" "$SCRIPT_PATH" "<Alt>c"
 
 # Apply all at once
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[${KEYS[*]}]"
+# gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[${KEYS[*]}]"
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[$(IFS=,; echo "${KEYS[*]}")]"
 
 echo "✅ All GNOME keyboard shortcuts installed with Alt modifier and correct workspace mapping."
 
