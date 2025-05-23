@@ -7,6 +7,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.completion.copilot-vim-cmp" },
+  -- { import = "astrocommunity.completion.supermaven-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.motion.mini-ai" },
   { import = "astrocommunity.motion.mini-jump" },
