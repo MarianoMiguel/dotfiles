@@ -5,9 +5,9 @@ margin_width 12
 window_padding_width 12
 
 # Font settings  
-# font_family family="JetBrainsMono Nerd Font" 
+font_family family="JetBrainsMono Nerd Font" 
 font_size 16
-modify_font cell_height 135%
+modify_font cell_height 150%
 
 # Background opacity
 background_opacity 0.7
@@ -73,11 +73,3 @@ selection_foreground #0e1419
 map ctrl+c copy_and_clear_or_interrupt
 map ctrl+v paste_from_clipboard
 
-
-
-# BEGIN_KITTY_FONTS
-font_family      family="JetBrainsMono Nerd Font Mono"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# END_KITTY_FONTS
