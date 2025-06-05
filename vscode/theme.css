@@ -1,10 +1,11 @@
 *:not(.codicon, .menubar-menu-button > *, .icon) {
-  font-family: 'GeistMono Nerd Font' !important;
+  font-family: "JetBrainsMono Nerd Font" !important;
   font-style: normal !important;
-  -webkit-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale !important;
-  text-rendering: optimizeLegibility;
 }
 .monaco-list[aria-label^="Your Code installation"] {
+  display: none !important;
+}
+
+.monaco-list[aria-label^="Your Cursor installation"] {
   display: none !important;
 }
