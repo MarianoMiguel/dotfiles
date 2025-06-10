@@ -1,0 +1,202 @@
+{
+    "c9ed155d-c608-49e0-a2ac-446b4f22ab9e": {
+        "id": "c9ed155d-c608-49e0-a2ac-446b4f22ab9e",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1745515357.5798612
+    },
+    "8424b5b6-0df6-445b-8607-4a49586b1f82": {
+        "id": "8424b5b6-0df6-445b-8607-4a49586b1f82",
+        "name": "Go to workspace",
+        "keyword": "w",
+        "cmd": "#!/bin/bash\n\nwmctrl -s $(( $1 - 1 ))",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1745683723.2792752
+    },
+    "7598014e-690c-443a-9e97-9537c8c8a75c": {
+        "id": "7598014e-690c-443a-9e97-9537c8c8a75c",
+        "name": "Move window to workspace",
+        "keyword": "m",
+        "cmd": "#!/bin/bash\n\nwmctrl -r :ACTIVE: -t $(( $1 - 1 ))",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1745684339.2106104
+    },
+    "e7dbadf4-42d0-44a8-ab34-4dc3c3d17577": {
+        "id": "e7dbadf4-42d0-44a8-ab34-4dc3c3d17577",
+        "name": "Center And Maximize",
+        "keyword": "c",
+        "cmd": "#!/usr/bin/env bash\n#\n# centre-active-win  \u2013 resize the active window to 80 % of the monitor\n#                      and centre it\n\n# Get current workspace resolution (first line with a \u201c*\u201d)\nread scrW scrH <<<\"$(xrandr | awk '/\\*/{split($1,a,\"x\");print a[1],a[2]; exit}')\"\n\n# Target size = 80 %\nnewW=$(( scrW * 80 / 100 ))\nnewH=$(( scrH * 80 / 100 ))\n\n# Top-left corner so that the window is centred\nposX=$(( (scrW - newW) / 2 ))\nposY=$(( (scrH - newH) / 2 ))\n\n# Apply (gravity 0 = UseWindowGravity)\nwmctrl -r :ACTIVE: -e 0,\"$posX\",\"$posY\",\"$newW\",\"$newH\"\n",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745684852.449264
+    },
+    "2f014160-13f5-42ff-9169-a17ace7934b4": {
+        "id": "2f014160-13f5-42ff-9169-a17ace7934b4",
+        "name": "kitty",
+        "keyword": "kitty",
+        "cmd": "#!/bin/bash\n\nKITTY_DISABLE_WAYLAND=1 kitty &",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686160.2036827
+    },
+    "f49af1c0-9fc9-472c-b591-b273529e741b": {
+        "id": "f49af1c0-9fc9-472c-b591-b273529e741b",
+        "name": "1",
+        "keyword": "w1",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 0",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686442.723363
+    },
+    "fdbadb4e-8738-49d5-867a-1c4fa99935b0": {
+        "id": "fdbadb4e-8738-49d5-867a-1c4fa99935b0",
+        "name": "2",
+        "keyword": "w2",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 1",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686448.4164474
+    },
+    "ec27b384-0967-462b-bb48-a53489fc5560": {
+        "id": "ec27b384-0967-462b-bb48-a53489fc5560",
+        "name": "3",
+        "keyword": "w3",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 2",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686455.5025659
+    },
+    "0d85def9-a770-44d7-b06d-6be631442f67": {
+        "id": "0d85def9-a770-44d7-b06d-6be631442f67",
+        "name": "4",
+        "keyword": "w4",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 3",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686498.992339
+    },
+    "6588d359-4373-4fca-a5ba-79b23324fb17": {
+        "id": "6588d359-4373-4fca-a5ba-79b23324fb17",
+        "name": "5",
+        "keyword": "w5",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 4",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686504.2108376
+    },
+    "f5e7cccc-b144-4753-ae40-4dc1b58cfb23": {
+        "id": "f5e7cccc-b144-4753-ae40-4dc1b58cfb23",
+        "name": "6",
+        "keyword": "w6",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 5",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686510.1477852
+    },
+    "3f612fdf-a8f4-4464-8fa6-383195e3fac5": {
+        "id": "3f612fdf-a8f4-4464-8fa6-383195e3fac5",
+        "name": "7",
+        "keyword": "w7",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 6",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686517.746445
+    },
+    "1a314964-35a5-459e-b0d7-13b20117b015": {
+        "id": "1a314964-35a5-459e-b0d7-13b20117b015",
+        "name": "8",
+        "keyword": "w8",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 7",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686524.6394846
+    },
+    "22b237a3-5701-4b72-8a5a-9341790fda01": {
+        "id": "22b237a3-5701-4b72-8a5a-9341790fda01",
+        "name": "9",
+        "keyword": "w9",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 8",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686531.2642758
+    },
+    "4ea2a27c-7f67-4d25-9e6d-b73daa9e6ed8": {
+        "id": "4ea2a27c-7f67-4d25-9e6d-b73daa9e6ed8",
+        "name": "10",
+        "keyword": "w10",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 9",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686546.502794
+    },
+    "e90afdca-67fa-4308-babd-1850297c8a2b": {
+        "id": "e90afdca-67fa-4308-babd-1850297c8a2b",
+        "name": "11",
+        "keyword": "w11",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 10",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686552.852911
+    },
+    "e46b9464-0a7a-4ba8-8c61-7f68f9d30d21": {
+        "id": "e46b9464-0a7a-4ba8-8c61-7f68f9d30d21",
+        "name": "12",
+        "keyword": "w12",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 11",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686557.9301448
+    },
+    "7adc8010-c24e-4bc3-a884-41c77c740014": {
+        "id": "7adc8010-c24e-4bc3-a884-41c77c740014",
+        "name": "13",
+        "keyword": "w13",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 12",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686564.3634257
+    },
+    "3197df29-64d7-426f-bb36-a4e89a282a06": {
+        "id": "3197df29-64d7-426f-bb36-a4e89a282a06",
+        "name": "14",
+        "keyword": "w14",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 13",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686570.5529299
+    },
+    "13edf092-fe11-48a3-8c86-42df8297232f": {
+        "id": "13edf092-fe11-48a3-8c86-42df8297232f",
+        "name": "15",
+        "keyword": "w15",
+        "cmd": "#!/bin/bash\n\nwmctrl -s 14",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1745686577.529901
+    }
+}

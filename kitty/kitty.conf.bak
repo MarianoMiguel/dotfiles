@@ -1,0 +1,75 @@
+# kitty.conf - Converted from Alacritty
+
+# Window padding
+margin_width 12 
+window_padding_width 12
+
+# Font settings  
+font_family family="JetBrainsMono Nerd Font" 
+font_size 16
+modify_font cell_height 150%
+
+# Background opacity
+background_opacity 0.7
+background_blur 24
+
+macos_show_window_title_in none
+macos_titlebar_color #272727
+macos_menubar_title_max_length 0
+
+# Set shell and startup command
+shell /bin/zsh --login
+
+background #0d1017 
+foreground #e5e1cf
+cursor #f19618
+selection_background #243340
+color0 #000000
+color8 #323232
+color1 #ff3333
+color9 #ff6565
+color2 #b8cc52
+color10 #e9fe83
+color3 #e6c446
+color11 #fff778
+color4 #36a3d9
+color12 #68d4ff
+color5 #f07078
+color13 #ffa3aa
+color6 #95e5cb
+color14 #c7fffc
+color7 #ffffff
+color15 #ffffff
+selection_foreground #0e1419
+
+# # Colors - Tundra Theme
+# # Reference: https://github.com/arcticicestudio/nord
+#
+# foreground            #cdd6f4
+# background            #11121d
+# cursor               #a9b1d6
+#
+# # Normal colors
+# color0  #3b4252
+# color1  #bf616a
+# color2  #a3be8c
+# color3  #ebcb8b
+# color4  #81a1c1
+# color5  #b48ead
+# color6  #88c0d0
+# color7  #e5e9f0
+#
+# # Bright colors
+# color8  #4c566a
+# color9  #bf616a
+# color10 #a3be8c
+# color11 #ebcb8b
+# color12 #81a1c1
+# color13 #b48ead
+# color14 #8fbcbb
+# color15 #eceff4
+
+# hide_window_decorations yes
+map ctrl+c copy_and_clear_or_interrupt
+map ctrl+v paste_from_clipboard
+
