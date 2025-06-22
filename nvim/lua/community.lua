@@ -40,4 +40,5 @@ return {
   { import = "astrocommunity.diagnostics.tiny-inline-diagnostic-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.search.grug-far-nvim" },
+  { import = "astrocommunity.pack.java" },
 }
