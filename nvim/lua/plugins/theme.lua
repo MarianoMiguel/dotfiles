@@ -1,5 +1,5 @@
 return {
-  -- TokyoNight as fallback
+  -- TokyoNight as fallback (used until DMS generates dankcolors.lua via Matugen)
   {
     "folke/tokyonight.nvim",
     opts = {
@@ -11,14 +11,10 @@ return {
     },
   },
 
-  -- niri-theme: dynamic theme from niri-themes system
-  -- Colorscheme at ~/.config/nvim/colors/niri-theme.lua (symlinked from niri-themes)
-  -- Use :colorscheme niri-theme to activate, or set as default below
   {
     "LazyVim/LazyVim",
     opts = {
-      -- Change to "niri-theme" to use dynamic themes, "tokyonight" for static
-      colorscheme = "niri-theme",
+      colorscheme = "tokyonight",
     },
   },
 }
