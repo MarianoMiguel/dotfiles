@@ -1,0 +1,1 @@
+/home/mariano/.config/niri-themes/generated/nvim-colors.lua
