@@ -4,8 +4,8 @@ return {
 		priority = 1000,
 		config = function()
 			require('base16-colorscheme').setup({
-				base00 = '#26233a',
-				base01 = '#26233a',
+				base00 = '#1f1d2e',
+				base01 = '#1f1d2e',
 				base02 = '#908a96',
 				base03 = '#908a96',
 				base04 = '#eae3f2',
@@ -29,7 +29,7 @@ return {
 			})
 			vim.api.nvim_set_hl(0, 'Statusline', {
 				bg = '#ddc2fe',
-				fg = '#26233a',
+				fg = '#1f1d2e',
 			})
 			vim.api.nvim_set_hl(0, 'LineNr', { fg = '#908a96' })
 			vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#eddfff', bold = true })
